@@ -6,7 +6,9 @@ app = FastAPI(
     title="Private Literature Proxy",
     description="A lightweight proxy for academic search using CrossRef.",
     version="0.1.0",
+    servers=[{"url": "https://literature-proxy.onrender.com"}],
 )
+
 
 # 允许跨域，方便以后前端或 GPT 调用
 app.add_middleware(
