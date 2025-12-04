@@ -1,67 +1,47 @@
-VENUE_DB = {
-    # Top-tier flagships
-    "CHI": {
-        "tier": "Top-tier flagship",
-        "category": "HCI",
-        "notes": "ACM CHI is the premier conference in Human-Computer Interaction.",
-        "recognised_as_target": True,
-        "alias": ["ACM CHI", "CHI Conference"]
-    },
-    "UIST": {
-        "tier": "Top-tier flagship",
-        "category": "HCI",
-        "notes": "ACM UIST is a flagship venue for interactive systems and technical HCI.",
-        "recognised_as_target": True,
-        "alias": ["ACM UIST"]
-    },
-    "IEEE VR": {
-        "tier": "Top-tier flagship",
-        "category": "VR/AR",
-        "notes": "One of the premier conferences in Virtual Reality.",
-        "recognised_as_target": True
-    },
-    "SIGGRAPH": {
-        "tier": "Top-tier flagship",
-        "category": "Graphics",
-        "notes": "The premier conference for computer graphics.",
-        "recognised_as_target": True
-    },
-    "CVPR": {
-        "tier": "Top-tier flagship",
-        "category": "Computer Vision",
-        "notes": "One of the top conferences in computer vision.",
-        "recognised_as_target": True
-    },
-    "ICCV": {
-        "tier": "Top-tier flagship",
-        "category": "Computer Vision",
-        "notes": "Top-tier, alternating year with CVPR.",
-        "recognised_as_target": True
-    },
-    "NeurIPS": {
-        "tier": "Top-tier flagship",
-        "category": "Machine Learning",
-        "notes": "Premier machine learning conference.",
-        "recognised_as_target": True
-    },
-    "TPAMI": {
-        "tier": "Top-tier flagship journal",
-        "category": "Computer Vision / Machine Learning",
-        "notes": "One of the highest-impact journals in AI/vision.",
-        "recognised_as_target": True
-    },
+import json
+from pathlib import Path
 
-    # High prestige but not flagship
-    "TVCG": {
-        "tier": "High-prestige journal (Q1)",
-        "category": "Graphics / Visualization",
-        "notes": "Top journal but not as broad as SIGGRAPH.",
-        "recognised_as_target": False
-    },
-    "CGF": {
-        "tier": "High-prestige journal (Q1)",
-        "category": "Graphics",
-        "notes": "Eurographics published journal.",
+DB_PATH = Path(__file__).parent / "venue_db.json"
+
+with DB_PATH.open("r", encoding="utf-8") as f:
+    VENUE_DB = json.load(f)
+
+
+def lookup_venue(raw_name: str):
+    """根据 venue 名称做几轮匹配：精确、别名、模糊。
+    返回 (found: bool, data: dict)。
+    """
+    name = (raw_name or "").strip()
+    if not name:
+        return False, {
+            "venue": "",
+            "overall_level": "Unknown",
+            "notes": "Empty venue name.",
+            "recognised_as_target": False,
+        }
+
+    # 1. 精确匹配 key，比如 "CHI"
+    if name in VENUE_DB:
+        return True, VENUE_DB[name]
+
+    lower_name = name.lower()
+
+    # 2. 别名匹配
+    for k, v in VENUE_DB.items():
+        for alias in v.get("alias", []):
+            if lower_name == alias.lower():
+                return True, v
+
+    # 3. 模糊匹配 full_name（包含关系）
+    for k, v in VENUE_DB.items():
+        full = v.get("full_name", "")
+        if lower_name in full.lower():
+            return True, v
+
+    # 4. 全部找不到
+    return False, {
+        "venue": name,
+        "overall_level": "Unknown",
+        "notes": "This venue is not in the curated database yet.",
         "recognised_as_target": False
     }
-}
