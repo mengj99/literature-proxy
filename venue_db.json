@@ -11,7 +11,7 @@
     "alias": ["ACM UIST", "UIST Conference"]
   },
   "IEEE VR": {
-    "short_name": "IEEE VR",
+    "short_name": "IEEE VR Conference",
     "full_name": "IEEE Conference on Virtual Reality and 3D User Interfaces",
     "type": "conference",
     "area": "VR/AR",
@@ -137,7 +137,7 @@
     "type": "conference",
     "area": "Machine Learning",
     "overall_level": "S",
-    "source_tags": ["Flagtage ML"],
+    "source_tags": ["Flagship ML"],
     "notes": "One of the top ML venues.",
     "recognised_as_target": true,
     "alias": ["ICML"]
@@ -147,10 +147,10 @@
     "full_name": "International Conference on Learning Representations",
     "type": "conference",
     "area": "Deep Learning",
-    "overall_level": "A",
-    "source_tags": ["Top DL"],
-    "notes": "Focus on representation learning.",
-    "recognised_as_target": false,
+    "overall_level": "S",
+    "source_tags": ["Flagship ML/DL"],
+    "notes": "Focus on representation learning. Currently one of the top three ML conferences alongside NeurIPS and ICML.",
+    "recognised_as_target": true,
     "alias": ["ICLR"]
   },
   "SIGGRAPH": {
@@ -166,7 +166,7 @@
   },
   "SIGGRAPH Asia": {
     "short_name": "SIGGRAPH Asia",
-    "full_name": "ACM SIGGRAPH Asia",
+    "full_name": "ACM SIGGRAPH Asia Conference on Computer Graphics and Interactive Techniques",
     "type": "conference",
     "area": "Graphics",
     "overall_level": "S",
@@ -234,7 +234,7 @@
     "type": "conference",
     "area": "Perception/Graphics",
     "overall_level": "A",
-    "notes": "Major venue for perception applied to VR/graphics.",
+    "notes": "Major venue for perception applied to VR/graphics.(pre-2014) SAP (2014-present)",
     "recognised_as_target": false,
     "alias": ["ACM APGV"]
   },
@@ -316,7 +316,7 @@
     "type": "conference",
     "area": "Computer Vision",
     "overall_level": "A",
-    "notes": "Growing vision conference focusing on applications.",
+    "notes": "Growing vision conference focusing on applications. Rapidly growing, now firmly established as strong A-tier vision venue.",
     "recognised_as_target": false,
     "alias": ["IEEE WACV"]
   },
@@ -335,14 +335,15 @@
     "full_name": "IEEE Visualization Conference",
     "type": "conference",
     "area": "Visualization/Graphics",
-    "overall_level": "A",
-    "notes": "Premier venue for visualization research.",
-    "recognised_as_target": false,
+    "overall_level": "S",
+    "source_tags": ["Flagship Graphics"],
+    "notes": "Premier Top venue for visualization research.",
+    "recognised_as_target": true,
     "alias": ["VIS Conference"]
   },
   "Pacific Graphics": {
     "short_name": "PG",
-    "full_name": "Pacific Graphics",
+    "full_name": "The Pacific Conference on Computer Graphics and Applications",
     "type": "conference",
     "area": "Graphics",
     "overall_level": "A",
@@ -482,9 +483,9 @@
     "full_name": "Presence: Teleoperators and Virtual Environments",
     "type": "journal",
     "area": "VR/Presence",
-    "overall_level": "B",
+    "overall_level": "D",
     "source_tags": ["Classic VR"],
-    "notes": "Classic VR journal focusing on presence and teleoperation.",
+    "notes": "Classic VR journal focusing on presence and teleoperation.(discontinued) Classic but discontinued VR journal (ceased publication in 2019).",
     "recognised_as_target": false,
     "alias": ["Presence Journal"]
   },
@@ -693,19 +694,9 @@
     "type": "journal",
     "area": "VR/AR",
     "overall_level": "C",
-    "notes": "Frontiers journal, not core VR AR venue. Acceptable but not considered high-prestige.",
+    "notes": "Frontiers journal, not core VR AR venue. Acceptable but not considered high-prestige. Emerging but not high-impact yet.",
     "recognised_as_target": false,
     "alias": ["Frontiers Virtual Reality"]
-  },
-  "PRESENCE": {
-    "short_name": "PRESENCE",
-    "full_name": "Presence: Virtual and Augmented Reality (MIT Press)",
-    "type": "journal",
-    "area": "VR/AR",
-    "overall_level": "C",
-    "notes": "Historically influential but currently low-impact. Acceptable reference but not core.",
-    "recognised_as_target": false,
-    "alias": ["Presence VR"]
   },
   "Evergreen": {
     "short_name": "Evergreen",
@@ -776,7 +767,68 @@
     "notes": "Preprint server without peer review.",
     "recognised_as_target": false,
     "alias": ["Research Square Preprint"]
+  },
+  "IEEE Transactions on Multimedia": {
+    "short_name": "TMM",
+    "full_name": "IEEE Transactions on Multimedia",
+    "type": "journal",
+    "area": "Multimedia / Computer Vision",
+    "overall_level": "B",
+    "notes": "CCF B-level; widely recognized multimedia journal; moderate-to-high impact.",
+    "recognised_as_target": false,
+    "alias": ["IEEE TMM"]
+  },
+  "IEEE Transactions on Information Forensics and Security": {
+    "short_name": "TIFS",
+    "full_name": "IEEE Transactions on Information Forensics and Security",
+    "type": "journal",
+    "area": "Security / Signal Processing / Computer Vision",
+    "overall_level": "A",
+    "notes": "CCF A-level; high-impact, SCImago SJR Q1, widely cited.",
+    "recognised_as_target": false,
+    "alias": ["IEEE TIFS"]
+  },
+  "IEEE Transactions on Circuits and Systems for Video Technology": {
+    "short_name": "TCSVT",
+    "full_name": "IEEE Transactions on Circuits and Systems for Video Technology",
+    "type": "journal",
+    "area": "Video Processing / Computer Vision",
+    "overall_level": "B",
+    "notes": "CCF B-level journal in graphics & multimedia category.",
+    "recognised_as_target": false,
+    "alias": ["IEEE TCSVT"]
+  },
+  "Frontiers of Computer Science": {
+    "short_name": "FCS",
+    "full_name": "Frontiers of Computer Science",
+    "type": "journal",
+    "area": "General Computer Science",
+    "overall_level": "B",
+    "notes": "CCF B-level. Quality and citation reliability vary — treat as secondary reference.",
+    "recognised_as_target": false,
+    "alias": ["FCS Journal"]
+  },
+  "CCF Transactions on Pervasive Computing and Interaction": {
+    "short_name": "TPCI",
+    "full_name": "CCF Transactions on Pervasive Computing and Interaction",
+    "type": "journal",
+    "area": "HCI / Pervasive Computing",
+    "overall_level": "B",
+    "notes": "CCF B-level journal; relevant for HCI/interaction studies.",
+    "recognised_as_target": false,
+    "alias": ["CCF TPCI"]
+  },
+  "SCIENTIA SINICA Informationis": {
+    "short_name": "SCIENTIA Informationis",
+    "full_name": "SCIENTIA SINICA Informationis",
+    "type": "journal",
+    "area": "Information Science / Theoretical Computer Science",
+    "overall_level": "A",
+    "notes": "CCF A-level Chinese-English journal; good reputation domestically, but for international work treat carefully.",
+    "recognised_as_target": false,
+    "alias": ["SCI Informationis", "Science China Info"]
   }
 }
+
 
 
