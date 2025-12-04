@@ -1,4 +1,15 @@
 {
+  "UIST": {
+    "short_name": "UIST",
+    "full_name": "ACM Symposium on User Interface Software and Technology",
+    "type": "conference",
+    "area": "HCI / Interactive Systems",
+    "overall_level": "S",
+    "source_tags": ["Flagship HCI", "UIST"],
+    "notes": "Top-tier flagship conference for interactive systems and technical HCI.",
+    "recognised_as_target": true,
+    "alias": ["ACM UIST", "UIST Conference"]
+  },
   "IEEE VR": {
     "short_name": "IEEE VR",
     "full_name": "IEEE Conference on Virtual Reality and 3D User Interfaces",
