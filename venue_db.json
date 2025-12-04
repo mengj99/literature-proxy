@@ -686,6 +686,96 @@
     "recognised_as_target": false,
     "alias": []
   
+  },
+  "Frontiers in Virtual Reality": {
+    "short_name": "Frontiers VR",
+    "full_name": "Frontiers in Virtual Reality",
+    "type": "journal",
+    "area": "VR/AR",
+    "overall_level": "C",
+    "notes": "Frontiers journal, not core VR AR venue. Acceptable but not considered high-prestige.",
+    "recognised_as_target": false,
+    "alias": ["Frontiers Virtual Reality"]
+  },
+  "PRESENCE": {
+    "short_name": "PRESENCE",
+    "full_name": "Presence: Virtual and Augmented Reality (MIT Press)",
+    "type": "journal",
+    "area": "VR/AR",
+    "overall_level": "C",
+    "notes": "Historically influential but currently low-impact. Acceptable reference but not core.",
+    "recognised_as_target": false,
+    "alias": ["Presence VR"]
+  },
+  "Evergreen": {
+    "short_name": "Evergreen",
+    "full_name": "Evergreen (Kyushu University Press)",
+    "type": "journal",
+    "area": "General Science / Info Tech",
+    "overall_level": "D",
+    "notes": "Regional, low-impact journal. Not considered a formal VR/AR publication venue.",
+    "recognised_as_target": false,
+    "alias": []
+  },
+  "INPLASY Registered Review": {
+    "short_name": "INPLASY",
+    "full_name": "International Platform of Registered Systematic Review and Meta-analysis Protocols",
+    "type": "registry",
+    "area": "Systematic Review Registration",
+    "overall_level": "D",
+    "notes": "Registration platform, not a journal or conference.",
+    "recognised_as_target": false,
+    "alias": ["INPLASY Protocol"]
+  },
+  "Springer Research Square Preprint": {
+    "short_name": "Research Square",
+    "full_name": "Research Square Preprint Platform (Springer Nature)",
+    "type": "preprint",
+    "area": "General Science",
+    "overall_level": "D",
+    "notes": "Preprint; not peer-reviewed; not counted as publication.",
+    "recognised_as_target": false,
+    "alias": ["Research Square"]
+  },
+  "MDPI Electronics": {
+    "short_name": "Electronics",
+    "full_name": "MDPI Electronics",
+    "type": "journal",
+    "area": "Electronics / Computing",
+    "overall_level": "C",
+    "notes": "MDPI journal, peer-reviewed but not high-prestige.",
+    "recognised_as_target": false,
+    "alias": ["Electronics MDPI"]
+  },
+  "ACM Mensch und Computer": {
+    "short_name": "MuC",
+    "full_name": "ACM Mensch und Computer",
+    "type": "conference",
+    "area": "HCI",
+    "overall_level": "C",
+    "notes": "German-speaking HCI regional conference. Not a SIGCHI flagship.",
+    "recognised_as_target": false,
+    "alias": ["Mensch und Computer"]
+  },
+  "ACM UbiComp Companion": {
+    "short_name": "UbiComp Companion",
+    "full_name": "ACM UbiComp Companion Proceedings",
+    "type": "conference",
+    "area": "Ubiquitous Computing",
+    "overall_level": "C",
+    "notes": "Adjunct proceedings; not the main UbiComp conference.",
+    "recognised_as_target": false,
+    "alias": ["UbiComp Adjunct", "UbiComp Companion Proceedings"]
+  },
+  "Research Square (Springer Nature)": {
+    "short_name": "Research Square",
+    "full_name": "Research Square Preprint",
+    "type": "preprint",
+    "area": "General Science",
+    "overall_level": "D",
+    "notes": "Preprint server without peer review.",
+    "recognised_as_target": false,
+    "alias": ["Research Square Preprint"]
   }
 }
 
