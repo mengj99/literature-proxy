@@ -1,5 +1,7 @@
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi import Query
+from venue_db import VENUE_DB
 import httpx
 
 app = FastAPI(
@@ -99,4 +101,26 @@ async def root():
             "/search_crossref",
             "/bibtex_from_doi",
         ],
+    }
+
+@app.get("/venue_info")
+async def venue_info(venue: str = Query(...)):
+    venue_key = venue.strip()
+
+    # Exact match first
+    if venue_key in VENUE_DB:
+        return {"venue": venue_key, **VENUE_DB[venue_key]}
+
+    # Try alias matching
+    for k, v in VENUE_DB.items():
+        if "alias" in v and venue_key in v["alias"]:
+            return {"venue": k, **v}
+
+    # If unknown
+    return {
+        "venue": venue_key,
+        "tier": "Unknown",
+        "category": "Unknown",
+        "notes": "This venue is not in the curated top-tier list.",
+        "recognised_as_target": False
     }
